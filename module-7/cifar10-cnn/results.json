@@ -1,0 +1,155 @@
+{
+ "tuning": {
+  "Baseline (course CNN)": {
+   "params": 122570,
+   "best_val_acc": 0.6468,
+   "final_train_acc": 0.6888,
+   "final_val_acc": 0.6468,
+   "best_val_loss_epoch": 15,
+   "min_val_loss": 0.9914088256835938,
+   "final_val_loss": 0.9914088256835938,
+   "seconds": 40
+  },
+  "Baseline + dropout": {
+   "params": 122570,
+   "best_val_acc": 0.5754,
+   "final_train_acc": 0.5862,
+   "final_val_acc": 0.5694,
+   "best_val_loss_epoch": 15,
+   "min_val_loss": 1.18829443359375,
+   "final_val_loss": 1.18829443359375,
+   "seconds": 39
+  },
+  "Deeper + BatchNorm": {
+   "params": 551018,
+   "best_val_acc": 0.7208,
+   "final_train_acc": 0.7555,
+   "final_val_acc": 0.7208,
+   "best_val_loss_epoch": 15,
+   "min_val_loss": 0.79848466796875,
+   "final_val_loss": 0.79848466796875,
+   "seconds": 270
+  },
+  "Deeper + BatchNorm + augmentation": {
+   "params": 551018,
+   "best_val_acc": 0.732,
+   "final_train_acc": 0.7462,
+   "final_val_acc": 0.732,
+   "best_val_loss_epoch": 15,
+   "min_val_loss": 0.804341796875,
+   "final_val_loss": 0.804341796875,
+   "seconds": 323
+  }
+ },
+ "test_scores": {
+  "Baseline (course CNN)": {
+   "accuracy": 0.6575,
+   "precision": 0.6558137732146548,
+   "recall": 0.6575000000000001,
+   "f1": 0.6544569699054319
+  },
+  "Baseline + dropout": {
+   "accuracy": 0.5715,
+   "precision": 0.5822212338364519,
+   "recall": 0.5715,
+   "f1": 0.5645186897774438
+  },
+  "Deeper + BatchNorm": {
+   "accuracy": 0.7286,
+   "precision": 0.736342510421591,
+   "recall": 0.7286,
+   "f1": 0.7276498099826814
+  },
+  "Deeper + BatchNorm + augmentation": {
+   "accuracy": 0.7346,
+   "precision": 0.7401119785092436,
+   "recall": 0.7346,
+   "f1": 0.7351039728870665
+  }
+ },
+ "final": {
+  "test_acc": 0.8258,
+  "test_loss": 0.5407757446289062,
+  "precision": 0.8311318171832498,
+  "recall": 0.8257999999999999,
+  "f1": 0.8269610634850928,
+  "epochs": 40,
+  "minutes": 14.7,
+  "best_val_acc": 0.8286,
+  "final_train_acc": 0.8634,
+  "params": 551018
+ },
+ "per_class": {
+  "airplane": {
+   "precision": 0.8652037617554859,
+   "recall": 0.828
+  },
+  "automobile": {
+   "precision": 0.9375629405840886,
+   "recall": 0.931
+  },
+  "bird": {
+   "precision": 0.7984665936473165,
+   "recall": 0.729
+  },
+  "cat": {
+   "precision": 0.5834752981260647,
+   "recall": 0.685
+  },
+  "deer": {
+   "precision": 0.884090909090909,
+   "recall": 0.778
+  },
+  "dog": {
+   "precision": 0.7088733798604188,
+   "recall": 0.711
+  },
+  "frog": {
+   "precision": 0.8414179104477612,
+   "recall": 0.902
+  },
+  "horse": {
+   "precision": 0.9291338582677166,
+   "recall": 0.826
+  },
+  "ship": {
+   "precision": 0.8839622641509434,
+   "recall": 0.937
+  },
+  "truck": {
+   "precision": 0.8791312559017942,
+   "recall": 0.931
+  }
+ },
+ "top_mistakes": [
+  [
+   217,
+   "dog",
+   "cat"
+  ],
+  [
+   160,
+   "cat",
+   "dog"
+  ],
+  [
+   70,
+   "deer",
+   "cat"
+  ],
+  [
+   68,
+   "bird",
+   "cat"
+  ],
+  [
+   66,
+   "airplane",
+   "ship"
+  ]
+ ],
+ "n_wrong": 1742,
+ "report": "              precision    recall  f1-score   support\n\n    airplane      0.865     0.828     0.846      1000\n  automobile      0.938     0.931     0.934      1000\n        bird      0.798     0.729     0.762      1000\n         cat      0.583     0.685     0.630      1000\n        deer      0.884     0.778     0.828      1000\n         dog      0.709     0.711     0.710      1000\n        frog      0.841     0.902     0.871      1000\n       horse      0.929     0.826     0.875      1000\n        ship      0.884     0.937     0.910      1000\n       truck      0.879     0.931     0.904      1000\n\n    accuracy                          0.826     10000\n   macro avg      0.831     0.826     0.827     10000\nweighted avg      0.831     0.826     0.827     10000\n",
+ "mlx": "0.32.4",
+ "device": "Device(gpu, 0)"
+}
